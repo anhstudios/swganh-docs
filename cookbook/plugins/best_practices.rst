@@ -1,5 +1,6 @@
 .. index::
-	single: Plugins; Best Practices
+    single: Plugins; Best Practices
+
 Plugin Structure and Best Practices
 ===================================
 
@@ -14,17 +15,17 @@ Directory Structure
 
 .. code-block:: text
 
-	XXX/...
-		my_plugin/
-		    CMakeLists.txt
-			LICENSE
-			main.cc
-			resources/
-				config/
-					my_plugin.cfg.dist
-				doc/
-					index.rst
-					
+    XXX/...
+        my_plugin/
+            CMakeLists.txt
+            LICENSE
+            main.cc
+            resources/
+                config/
+                    my_plugin.cfg.dist
+                doc/
+                    index.rst
+                    
 The ``XXX`` directory(ies) reflects the namespace structure of the plugin.
 
 The following files are mandatory:
@@ -37,6 +38,6 @@ The following files are mandatory:
 
 .. note::
 
-	These rules are in place to ensure that the build system and other 3rd party
-	tools can rely on this default structure to perform their work.
+    These rules are in place to ensure that the build system and other 3rd party
+    tools can rely on this default structure to perform their work.
 
