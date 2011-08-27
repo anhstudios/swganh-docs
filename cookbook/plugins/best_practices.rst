@@ -25,6 +25,7 @@ Directory Structure
                     my_plugin.cfg.dist
                 doc/
                     index.rst
+                scripts/
                     
 The ``XXX`` directory(ies) reflects the namespace structure of the plugin.
 
@@ -35,6 +36,10 @@ The following files are mandatory:
 * ``LICENSE``: The full license for the plugin code;
 * ``resources/config/my_plugin.cfg.dist``: The default configuration file for your plugin;
 * ``resources/doc/index.rst``: The root file for the plugin documentation.
+
+Python scripts/modules used by your plugin should be placed under the 
+``resources/scripts`` directory to ensure they are installed in the proper
+location after building.
 
 .. note::
 
