@@ -3,13 +3,15 @@ cmake_minimum_required(VERSION 2.8)
 project(swganh-docs NONE)
 
 # current version
-set(swganh_VERSION_MAJOR 0)
-set(swganh_VERSION_MINOR 4)
-set(swganh_VERSION_PATCH 0)
-set(swganh_VERSION
-	${swganh_VERSION_MAJOR}.${swganh_VERSION_MINOR}.${swganh_VERSION_PATCH})
+if(NOT DEFINED swganh_VERSION)
+    set(swganh_VERSION_MAJOR 0)
+    set(swganh_VERSION_MINOR 4)
+    set(swganh_VERSION_PATCH 0)
+    set(swganh_VERSION
+    	${swganh_VERSION_MAJOR}.${swganh_VERSION_MINOR}.${swganh_VERSION_PATCH})
+endif()
 
-set(CMAKE_MODULE_PATH "${CMAKE_SOURCE_DIR}/cmake")
+set(CMAKE_MODULE_PATH "${PROJECT_SOURCE_DIR}/cmake")
 
 find_package(Sphinx REQUIRED)
 
@@ -71,6 +73,7 @@ add_custom_target(swganh_doc_html ALL
 	"${CMAKE_CURRENT_SOURCE_DIR}"
 	"${SPHINX_HTML_DIR}"
 	COMMENT "Building HTML documentation with Sphinx"
-	WORKING_DIRECTORY "${SWGPY_PATH}/$\(Configuration\)"
+	DEPENDS swgpy
+	WORKING_DIRECTORY "${SWGPY_DIR}/$\(Configuration\)"
 	SOURCES ${DOCUMENTS}
 )
