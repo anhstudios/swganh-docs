@@ -4,6 +4,10 @@ Cookbook
 .. toctree::
     :hidden:
     
-    login/custom_authentication
-    
     plugins/best_practices
+    
+    scripting/command_scripts
+    
+    security/custom_authentication
+
+.. include:: /cookbook/map.rst.inc

@@ -1,5 +1,5 @@
-Event System
-============
+Events
+======
 
 Massively multiplayer online games are by necessity big. Really, really big. Think for just a moment about all the different categories of features that make up a game (referred to in the MMOServer code as **Services**): crafting, combat, chat, trading, movement... and the list can easily go on for some time. There is so much functionality provided by these services that in mots MMORPGs they need to be run across multiple processes and/or physical machines.
 
