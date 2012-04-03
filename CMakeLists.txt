@@ -1,6 +1,6 @@
 cmake_minimum_required(VERSION 2.8)
 
-project(swganh-docs NONE)
+project(swganh-docs CXX)
 
 # current version
 if(NOT DEFINED swganh_VERSION)

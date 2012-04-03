@@ -93,8 +93,10 @@ With the dependencies out of the way the hard part is over. It's now time to che
 ::
 
     git clone https://github.com/anhstudios/swganh.git
-    mkdir swganh/build
-    cd swganh/build
+    cd swganh
+    git submodule update --init
+    mkdir build
+    cd build
     cmake ..
     make
     
