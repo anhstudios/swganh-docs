@@ -1,5 +1,5 @@
-SWG:ANH Coding Standards
-========================
+Coding Standards
+================
 
 These are a list of things to keep in mind, check for and apply to code you're writing for the SWG:ANH application. Keeping to this will help make it easier for everyone who works on the codebase to identify what is going on in the code you've written. These are also points that all reviewers should be applying to incoming code before it hits the develop line. Sharing these changes back with the developer is vital to improving everyone's common working knowledge.
 
