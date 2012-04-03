@@ -65,6 +65,14 @@ FOREACH(__source_file ${DOCUMENTS})
     SOURCE_GROUP("${__source_group}" FILES ${__source_file})
 ENDFOREACH()
 
+if(WIN32)
+    set(WORKING_DIR "${SWGPY_DIR}/$\(Configuration\)")
+    set(DEPENDENCIES swgpy)
+else()
+    set(WORKING_DIR "${SWGPY_DIR}")
+    set(DEPENDENCIES)
+endif()
+
 add_custom_target(swganh_doc_html ALL
     ${SPHINX_EXECUTABLE}
 	-q -b html
@@ -73,7 +81,8 @@ add_custom_target(swganh_doc_html ALL
 	"${CMAKE_CURRENT_SOURCE_DIR}"
 	"${SPHINX_HTML_DIR}"
 	COMMENT "Building HTML documentation with Sphinx"
-	DEPENDS swgpy
-	WORKING_DIRECTORY "${SWGPY_DIR}/$\(Configuration\)"
+	DEPENDS ${DEPENDENCIES}
+	WORKING_DIRECTORY "${WORKING_DIR}"
+	VERBATIM
 	SOURCES ${DOCUMENTS}
 )
