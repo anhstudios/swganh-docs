@@ -4,4 +4,9 @@ Contributing
 .. toctree::
     :hidden:
     
-    programmers/standards
+    bugs
+    patches
+    standards
+    license
+
+.. include:: /contributing/map.rst.inc

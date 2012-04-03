@@ -1,6 +1,6 @@
-
-SWG:ANH Server Architecture and Design Philosophy
-=================================================
+=========================================
+Server Architecture and Design Philosophy
+=========================================
 
 Main Application Parts
 
