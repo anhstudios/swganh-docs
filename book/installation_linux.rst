@@ -103,7 +103,7 @@ With the dependencies out of the way the hard part is over. It's now time to che
 
     git clone https://github.com/anhstudios/swganh.git
     cd swganh
-    git submodule init
+    git submodule update --init
     mkdir build
     cd build
     cmake ..

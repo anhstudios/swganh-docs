@@ -124,7 +124,7 @@ Run the following commands to generate the project and build the source.
 ::
 
     cd swganh
-    git submodule init
+    git submodule update --init
     mkdir build
     cd build
     cmake -G "Visual Studio 11" ..
