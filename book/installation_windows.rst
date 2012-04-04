@@ -13,7 +13,6 @@ The following is a complete list of the 3rd party dependencies that will need to
 - CMake 2.8.7+
 - Git 1.7+
 - Python 3.2
-- Sphinx
 - Mysql 5.1+
 - SWGANH Dependencies Package
 - SWGANH Game Client
@@ -52,31 +51,6 @@ Python is used for scripting as well as for generating the SWGANH documentation.
 .. note::
 
     Be sure to install the x86 (32bit) binaries and *NOT* the x86-64 (64bit) binaries, it would be bad.
-    
-Sphinx
-~~~~~~
-
-Sphinx is used to generate the SWGANH developer documentation. To install it on windows you need to first download and install the distribute package. Git Bash is recommend over the windows command prompt to run the following as it already comes with the **curl** utility.
-
-::
-
-    curl -O http://python-distribute.org/distribute_setup.py
-    python distribute_setup.py
-    easy_install Sphinx
-    
-.. NOTE::
-    
-    It is important that Sphinx is installed with support for Python3. The key to this is ensuring you install Sphinx using an easy_install (via the distribute package) that was built against Python 3.
-    
-.. WARNING::
-
-    If you get an error stating "Bad file number" it may indicate a confict with UAC. To get around this open a normal windows command prompt and enter the command.
-    
-    ::
-    
-        easy_install Sphinx
-    
-You will also need to add the path to Sphinx to the system PATH. In a default Python 3.2 install this path is `C:/Python32/Scripts`.
     
 Mysql 5.1+
 ~~~~~~~~~~
