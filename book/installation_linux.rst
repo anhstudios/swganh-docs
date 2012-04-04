@@ -21,13 +21,12 @@ The first step in a linux build is to ensure the major dependencies for building
 - GMock 1.6+
 - Mysql Server 5.1+
 - Mysql Connector C++ (Custom ANH Fork)
-- Sphinx (optional)
 
 In most cases modern linux distros will provide easily installable packages for most of the dependencies. First lets install the all the dependencies except for Boost, Mysql Connector C++ and Sphinx:
 
 ::
 
-    sudo apt-get install g++ python3-dev python3-setuptools libmysqlclient-dev mysql-server libgtest-dev google-mock libtbb-dev libglm-dev git git-gui gitk cmake make curl unzip libbz2-dev
+    sudo apt-get install g++ python3-dev libmysqlclient-dev mysql-server libgtest-dev google-mock libtbb-dev libglm-dev git git-gui gitk cmake make curl unzip libbz2-dev
     
 .. NOTE::
     
@@ -35,19 +34,11 @@ In most cases modern linux distros will provide easily installable packages for 
 
 During the installation of the above you will be asked to enter a password for the root mysql user. Be sure to remember this password for later in the installation process.
     
-The remaining dependencies require a little extra work to install properly on any linux distro. The easiest on the list is Sphinx, which is used to generate the SWGANH developer documentation. To install it on Ubuntu use the following command:
+The remaining dependencies require a little extra work to install properly on any linux distro. 
 
-::
+First up is Boost which needs to be linked specifically against Python3 so requires manual compilation and installation. In addition we make use of Boost-Log, a logging library that has been officially accepted into Boost but is currently in an incubation period. The interface is stable however and meets our requirments for logging.
 
-    sudo easy_install3 Sphinx
-    
-.. NOTE::
-    
-    It is important that Sphinx is installed with support for Python3. The key to this is ensuring you install Sphinx using an easy_install (via the distribute package) that was built against Python 3.
-
-Next up is Boost which needs to be linked specifically against Python3 so requires manual compilation and installation. In addition we make use of Boost-Log, a logging library that has been officially accepted into Boost but is currently in an incubation period. The interface is stable however and meets our requirments for logging.
-
-First download the latest source packages for Boost and Boost-log (at the time of this writing that is 1.49 and 1.1, respectively).
+Download the latest source packages for Boost and Boost-log (at the time of this writing that is 1.49 and 1.1, respectively).
 
 ::
 
