@@ -1,6 +1,6 @@
-===================
-SWGANH Code Testing
-===================
+============
+Code Testing
+============
 
 Before submitting a :doc:`pull request<pull_requests>`, you need to run the SWGANH test suite to check that your changes have not broken any existing code.
 
