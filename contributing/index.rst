@@ -4,8 +4,10 @@ Contributing
 .. toctree::
     :hidden:
     
-    bugs
-    patches
+    issues
+    pull_requests
+    tests
+    security
     standards
     license
 
