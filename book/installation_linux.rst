@@ -4,6 +4,10 @@ Linux Install Guide
 
 This chapter cover's the setup of SWGANH from source in a linux environment. This particular guide cover's installation using Ubuntu and should apply directly to most debian based flavors. Other flavors of linux should at minimum support GCC 4.6 and Python3.
 
+.. note::
+
+    This guide is based on Ubuntu 11.10. If you are building on another distro you may be required to install some of the 3rd party libraries manually.
+
 Installing Build Dependencies
 -----------------------------
 
