@@ -110,7 +110,7 @@ Next we'll copy in some files that are needed to run the server.
 
     cp -R ../data/config ./config
     cp -R ../data/scripts ./scripts
-    cp lib/py_swganh.so .
+    cp bin/swgpy ./swgpy
 
 Setting up the Database
 -----------------------
