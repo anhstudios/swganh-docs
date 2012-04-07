@@ -73,12 +73,14 @@ Now that the environment is ready you can build boost by simply running the b2 c
 
     ./b2
     sudo ./b2 install
-    
-Due to a bug in the bootstrap.sh file the Python root is not detected. For builds using the Ubuntu package version of Python this is not a problem, however, if you have installed Python to a non-standard location then you may get compile errors. In that case open up the **project-config.jam** file and add the path to the Python root as in the example below.
 
-::
+.. note::
 
-    python : 3.2 : /usr ;
+    Due to a bug in the bootstrap.sh file the Python root is not detected. For builds using the Ubuntu package version of Python this is not a problem, however, if you have installed Python to a non-standard location then you may get compile errors. In that case open up the **project-config.jam** file and add the path to the Python root as in the example below.
+
+    ::
+
+        python : 3.2 : /usr ;
     
 This leaves only Mysql Connector C++ left on our list. This project is the official C++ connector from Mysql, however, it doesn't appear to be in active development at this time. For this reason we have had to create our own fork to support a few features that are missing from the official source. First make sure you're not in the Boost directory from the previous step and run the following:
 
