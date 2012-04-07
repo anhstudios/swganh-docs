@@ -64,6 +64,7 @@ When configuring its important to specify the version of Python that Boost shoul
 
 ::
 
+    cd boost_1_49_0
     ./bootstrap.sh --with-python=python3.2
 
 Now that the environment is ready you can build boost by simply running the b2 command.
