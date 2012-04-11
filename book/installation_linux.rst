@@ -30,6 +30,7 @@ The first step in a linux build is to ensure the major dependencies for building
 In most cases modern linux distros will provide easily installable packages for most of the dependencies. First lets install the all the dependencies except for Boost, Mysql Connector C++ and Sphinx:
 
 ::
+    
     sudo apt-get install python3-dev libmysqlclient-dev mysql-server libgtest-dev google-mock libtbb-dev libglm-dev git git-gui gitk subversion cmake make curl unzip libbz2-dev
     
 .. NOTE::
@@ -92,8 +93,9 @@ Building GCC will take a bit of time. Once it's complete you will need to make i
     export CC=gcc-4.7
     export CXX=g++-4.7
 
-    export INCLUDE=$HOME/include:$INCLUDE
-    export LIB=$HOME/lib:$HOME/lib64:$LIB
+    export INCLUDE=$HOME/include:\$INCLUDE
+    export LIB=$HOME/lib:$HOME/lib64:\$LIB
+    export LD_LIBRARY_PATH=$HOME/lib:$HOME/lib64:\$LD_LIBRARY_PATH
     EOF
     source ~/.profile    
     
