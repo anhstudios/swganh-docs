@@ -11,7 +11,7 @@ if(NOT DEFINED swganh_VERSION)
     	${swganh_VERSION_MAJOR}.${swganh_VERSION_MINOR}.${swganh_VERSION_PATCH})
 endif()
 
-set(CMAKE_MODULE_PATH "${PROJECT_SOURCE_DIR}/cmake")
+set(CMAKE_MODULE_PATH "${PROJECT_SOURCE_DIR}/tools/cmake")
 
 find_package(Sphinx REQUIRED)
 
@@ -86,3 +86,7 @@ add_custom_target(swganh_doc_html ALL
 	VERBATIM
 	SOURCES ${DOCUMENTS}
 )
+
+configure_file(
+    ${PROJECT_SOURCE_DIR}/tools/windows/user_project.vcxproj.in
+    ${CMAKE_CURRENT_BINARY_DIR}/swganh_doc_html.vcxproj.user @ONLY)
