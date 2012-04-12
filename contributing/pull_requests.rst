@@ -105,6 +105,32 @@ To squash all commits into the first one, remove the word "pick" before the seco
 
     $ git push -f origin BRANCH_NAME
 
+
+Testing Pull Requests
+~~~~~~~~~~~~~~~~~~~~~
+
+Members of the testing team have a vital role to play in ensuring that all the code going into the official development line is up to par. This involves testing contributed bug fixes or even brand new features from the core development team or from coders in the community.
+
+In order to begin testing make sure you already have a SWGANH environment :doc:`installed </book/installation>`. Before each round of testing make sure that you have the latest changes from the official repository.
+
+.. code-block:: bash
+
+    $ git checkout develop
+    $ git fetch upstream
+    $ git merge upstream/develop
+
+Next it's time to find
+
+.. code-block: bash
+
+    $ git remote add USERNAME git://github.com/USERNAME/swganh.git
+
+.. code-block: bash
+
+    $ git fetch USERNAME
+    $ git checkout PULL_REQUEST_BRANCH
+
+
 .. _GitHub: http://github.com
 .. _SWGANH repository: http://github.com/anhstudios/swganh
 .. _SWGANH IRC: irc://irc.swganh.org
