@@ -119,17 +119,31 @@ In order to begin testing make sure you already have a SWGANH environment :doc:`
     $ git fetch upstream
     $ git merge upstream/develop
 
-Next it's time to find
+Next it's time to find a Pull Request to review, these are listed at https://github.com/anhstudios/swganh/pulls. After clicking on a pull request you can identify the user that made the request and the branch they want pulled from.
+
+.. image:: /images/contributing/pull_requests_image_1.png
+   :align: center
+
+In the case of the example above the user is **dead1ock** who wants someone to merge in the **feature/spatial_indexing** branch.
+
+The first time that you test a pull request from a contributor you will need to add them as a remote so that you can fetch their changes. Note that this only needs to be completed the first time you test a pull request from a new contributor.
 
 .. code-block: bash
 
+    # following the example above the USERNAME would be replaced with dead1ock
     $ git remote add USERNAME git://github.com/USERNAME/swganh.git
+
+With the contributor's remote added its now time to pull in their code and build it.
 
 .. code-block: bash
 
     $ git fetch USERNAME
     $ git checkout PULL_REQUEST_BRANCH
+    $ cd build
+    $ cmake ..
+    $ cmake --build .
 
+Replace **PULL_REQUEST_BRANCH** with the name identified from the pull request, in the example above this would be the **feature/spatial_indexing** branch.
 
 .. _GitHub: http://github.com
 .. _SWGANH repository: http://github.com/anhstudios/swganh
