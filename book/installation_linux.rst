@@ -201,7 +201,7 @@ Next we'll copy in some files that are needed to run the server.
     cp -R ../data/config ./config
     cp -R ../data/scripts ./scripts
     cp -R ./bin/swgpy ./swgpy
-    cp ./lib/mysql_* .
+    cp ./lib/*.so .
 
 Setting up the Database
 ~~~~~~~~~~~~~~~~~~~~~~~
