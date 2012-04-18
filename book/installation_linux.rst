@@ -21,8 +21,7 @@ The first step in a linux build is to ensure the major dependencies for building
 - Boost 1.49+
 - Boost-Log 1.1+
 - TBB (Thread Building Blocks) 3.0+
-- GTest 1.6+
-- GMock 1.6+
+- Turtle 1.1.1
 - Mysql Server 5.1+
 - Mysql Connector C++ (Custom ANH Fork)
 
@@ -30,7 +29,7 @@ In most cases modern linux distros will provide easily installable packages for 
 
 ::
 
-    sudo apt-get install g++ python3-dev libmysqlclient-dev mysql-server libgtest-dev google-mock libtbb-dev libglm-dev git git-gui gitk cmake make curl unzip libbz2-dev
+    sudo apt-get install g++ python3-dev libmysqlclient-dev mysql-server libtbb-dev libglm-dev git git-gui gitk cmake make curl unzip libbz2-dev
     
 .. NOTE::
     
@@ -81,6 +80,14 @@ Now that the environment is ready you can build boost by simply running the b2 c
     ::
 
         python : 3.2 : /usr ;
+        
+Turtle is a mocking library that is used for testing interactions between objects. This is a header only library and easy to install. Just download and unpack the library headers to the appropriate system path.
+
+::
+
+    cd ~
+    curl -L -O http://downloads.sourceforge.net/project/turtle/turtle/1.1.1/turtle-1.1.1.tar.bz2
+    sudo tar -xvjf turtle-1.1.1.tar.bz2 -C /usr/local/include
     
 This leaves only Mysql Connector C++ left on our list. This project is the official C++ connector from Mysql, however, it doesn't appear to be in active development at this time. For this reason we have had to create our own fork to support a few features that are missing from the official source. First make sure you're not in the Boost directory from the previous step and run the following:
 
