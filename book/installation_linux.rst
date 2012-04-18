@@ -29,7 +29,7 @@ In most cases modern linux distros will provide easily installable packages for 
 
 ::
 
-    sudo apt-get install g++ python3-dev libmysqlclient-dev mysql-server libtbb-dev libglm-dev git git-gui gitk cmake make curl unzip libbz2-dev
+    sudo apt-get install g++ python3-dev libmysqlclient-dev mysql-server libtbb-dev libglm-dev git git-gui gitk subversion cmake make curl unzip libbz2-dev
     
 .. NOTE::
     
@@ -47,17 +47,16 @@ Download the latest source packages for Boost and Boost-log (at the time of this
 
     curl -L -O http://downloads.sourceforge.net/project/boost/boost/1.49.0/boost_1_49_0.tar.bz2
     
-    curl -L -O http://downloads.sourceforge.net/project/boost-log/boost-log-1.1.zip
+    svn co https://boost-log.svn.sourceforge.net/svnroot/boost-log/trunk/boost-log/
     
 Next unpack both source packages and copy the Boost-log files into the main Boost package.
 
 ::
 
     tar -xvjf boost_1_49_0.tar.bz2
-    unzip boost-log-1.1.zip
     
-    cp -R boost-log-1.1/boost/log boost_1_49_0/boost/log
-    cp -R boost-log-1.1/libs/log boost_1_49_0/libs/log
+    cp -R boost-log/boost/log boost_1_49_0/boost/log
+    cp -R boost-log/libs/log boost_1_49_0/libs/log
     
 When configuring its important to specify the version of Python that Boost should compile against. To do that navigate to the boost_1_49_0 directory and run the following command.
 
