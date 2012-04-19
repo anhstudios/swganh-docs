@@ -110,14 +110,6 @@ With the dependencies out of the way the hard part is over. It's now time to che
     cd swganh/build
     cmake ..
     make
-    
-Next we'll copy in some files that are needed to run the server.
-
-::
-
-    cp -R ../data/config ./config
-    cp -R ../data/scripts ./scripts
-    cp -R ./bin/swgpy ./swgpy
 
 Setting up the Database
 -----------------------
@@ -145,7 +137,7 @@ Configuring and Running the Server
 
 You are now entering the home stretch, all that's left is to update the SWGANH configuration and kick off the server.
 
-Open the `swganh/build/config/swganh.cfg` file and edit the following items. First you will need to update the **tre_config** setting with the path to the **live.cfg** file in your SWGANH Game Client directory.
+Open the `swganh/build/bin/config/swganh.cfg` file and edit the following items. First you will need to update the **tre_config** setting with the path to the **live.cfg** file in your SWGANH Game Client directory.
 
 .. note::
 
@@ -163,17 +155,17 @@ Second, update the mysql database connection information with the address and us
 
 Finally, set the address in the **service.connection** section to your public facing IP and then save and close the file.
 
-You can now kick off the server by running this command in the **swganh/build** directory:
+You can now kick off the server by running this command in the **swganh/build/bin** directory:
 
 ::
 
-    ./bin/swganh
+    ./swganh
     
 To start the server in a background process you can use a tool like screen.
 
 ::
 
-    screen ./bin/swganh
+    screen ./swganh
     
 Hitting **ctrl+a** then **ctrl+d** will disconnect from the screen session but will leave the server running in the background. You can rejoin the server to shut it down with the following command:
 
