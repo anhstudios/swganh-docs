@@ -9,7 +9,7 @@ Installing Build Dependencies
 
 The following is a complete list of the 3rd party dependencies that will need to be installed before building the SWGANH source.
 
-- Microsoft Visual Studio 11.0 Beta+
+- Microsoft Visual Studio 11.0 Release Candidate+
 - CMake 2.8.7+
 - Git 1.7+
 - Python 3.2
@@ -17,10 +17,10 @@ The following is a complete list of the 3rd party dependencies that will need to
 - SWGANH Dependencies Package
 - SWGANH Game Client
 
-Visual Studio 11.0 Beta
+Visual Studio 11.0 Release Candidate
 ~~~~~~~~~~~~~~~~~~~~~~~
 
-When installing Visual Studio, be sure the version you are installing is at least the Beta version and **NOT** the Developer Preview. The Beta provides an opportunity to use the best tools Microsoft has to offer, so download the Ultimate edition.
+When installing Visual Studio, be sure the version you are installing is at least the Release Candidate version and **NOT** the Developer Preview. The Release Candidate provides an opportunity to use the best tools Microsoft has to offer, so download the Ultimate edition.
 
     http://www.microsoft.com/visualstudio/11/en-us/downloads#vs
 
