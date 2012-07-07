@@ -21,7 +21,7 @@ The first step in a linux build is to ensure the major dependencies for building
 - Boost 1.49+
 - Boost-Log 1.1+
 - TBB (Thread Building Blocks) 3.0+
-- Turtle 1.1.1
+- Turtle 1.2
 - Mysql Server 5.1+
 - Mysql Connector C++ (Custom ANH Fork)
 
@@ -85,8 +85,8 @@ Turtle is a mocking library that is used for testing interactions between object
 ::
 
     cd ~
-    curl -L -O http://downloads.sourceforge.net/project/turtle/turtle/1.1.1/turtle-1.1.1.tar.bz2
-    sudo tar -xvjf turtle-1.1.1.tar.bz2 -C /usr/local
+    curl -L -O http://downloads.sourceforge.net/project/turtle/turtle/1.2.0/turtle-1.2.0.tar.bz2
+    sudo tar -xvjf turtle-1.2.0.tar.bz2 -C /usr/local
     
 This leaves only Mysql Connector C++ left on our list. This project is the official C++ connector from Mysql, however, it doesn't appear to be in active development at this time. For this reason we have had to create our own fork to support a few features that are missing from the official source. First make sure you're not in the Boost directory from the previous step and run the following:
 
