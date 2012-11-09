@@ -4,11 +4,12 @@ Player
 .. automodule:: swgpy.object
 .. autoclass:: Player
 	:members:
-	
+
 Player Enums
 ~~~~~~~~~~~~
 
 .. currentmodule:: swgpy.object
+
 .. autoclass:: GENDER
 
 	* MALE
