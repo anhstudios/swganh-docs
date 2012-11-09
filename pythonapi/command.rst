@@ -1,7 +1,6 @@
 Command
 =======
-.. py:currentmodule:: swgpy.command
-
+.. automodule:: swgpy.command
 .. autoclass:: CommandInterface
 	:members:
 	:inherited-members:

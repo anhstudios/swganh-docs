@@ -10,5 +10,4 @@ Python API
     command
 	utility
 
-
 .. include:: /pythonapi/map.rst.inc
