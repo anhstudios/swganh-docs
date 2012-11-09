@@ -2,7 +2,7 @@ ObjectController
 ================
 
 .. automodule:: swgpy.object
-.. autoclass:: ObjectController
+.. autoclass:: ObserverInterface
 	:members:
 	:inherited-members:
 
