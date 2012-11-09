@@ -8,3 +8,9 @@ SWGKernel
 	
 .. autoclass:: ServiceManager
 	:members:
+
+.. autoclass::EventDispatcher
+	:members:
+	
+.. autoclass::PythonEvent
+	:members:

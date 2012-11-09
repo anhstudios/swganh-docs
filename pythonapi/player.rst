@@ -25,6 +25,14 @@ Player Enums
 	* LD
 	* FACTION_RANK
 	
+.. autoclass::PROFILE_FLAGS
+	:members:
+.. autoclass::XpData
+	:members:
+.. autoclass::QueryJournalData
+	:members:
+.. autoclass::DraftSchematicData
+	:members:
 .. autoclass:: ADMIN_TAG	
 
 	* CSR

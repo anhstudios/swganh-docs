@@ -132,9 +132,9 @@ is going to inherit from swganh::base::BaseService. Our code looks little like t
     class SocialService : public swganh::base::BaseService
     {
     public:
-        explicit SocialService(anh::app::KernelInterface* kernel);
+        explicit SocialService(swganh::app::KernelInterface* kernel);
 
-        anh::service::ServiceDescription GetServiceDescription();
+        swganh::service::ServiceDescription GetServiceDescription();
     };
 
 This sets up a very very basic structure, all we are doing here is just getting the service created, we will flesh it out later.
@@ -205,14 +205,14 @@ and our mysql_character_provider.cc has filled in the details for this function.
     {
         uint64_t character_id = 0;
         try {
-            auto conn = kernel_->GetDatabaseManager()->getConnection("galaxy");
+            auto conn = kernel_->GetDatabaseManager()->getConnection("swganh_galaxy");
             auto statement = std::unique_ptr<sql::PreparedStatement>(
                 conn->prepareStatement("SELECT id FROM object where custom_name like ? and type_id = ?;")
                 );
             statement->setString(1, name + '%');
-            statement->setUInt(2, swganh::object::player::Player::type);
+            statement->setUInt(2, swganh::object::Player::type);
             auto result_set = std::unique_ptr<sql::ResultSet>(statement->executeQuery());
-            if (result_set->next())
+            while(result_set->next())
             {
                 character_id = result_set->getUInt64(1);
             }
@@ -278,7 +278,7 @@ Lets see what that looks like now. This is social_service_binding.h
 
 .. code-block:: c
 
-    #include "anh/python_shared_ptr.h"
+    #include "swganh/python_shared_ptr.h"
     #include "social_service.h"
 
     #include <boost/python.hpp>
@@ -307,11 +307,11 @@ This will be used to expose all services out to Python. We will be using the Sim
 
 .. code-block:: py3
 
-    class_<anh::service::ServiceManager, boost::noncopyable>("ServiceManager", "provides an interface to common services", no_init)
+    class_<swganh::service::ServiceManager, boost::noncopyable>("ServiceManager", "provides an interface to common services", no_init)
     .def("simulation_service", make_function(
-            bind(&anh::service::ServiceManager::GetService<swganh::simulation::SimulationService>, std::placeholders::_1, "SimulationService"),
+            bind(&swganh::service::ServiceManager::GetService<swganh::simulation::SimulationService>, std::placeholders::_1, "SimulationService"),
             default_call_policies(),
-            boost::mpl::vector<std::shared_ptr<swganh::simulation::SimulationService>, anh::service::ServiceManager*>()),
+            boost::mpl::vector<std::shared_ptr<swganh::simulation::SimulationService>, swganh::service::ServiceManager*>()),
             "returns an internal refrence of the :class:`.SimulationService`")
 
 This is actually pretty complicated code and there is a lot of magic going on behind the scenes, but all we need to know is that we are exposing the

@@ -7,6 +7,8 @@ Python API
     kernel
     services
     objects
-	command
+    command
+	utility
+
 
 .. include:: /pythonapi/map.rst.inc

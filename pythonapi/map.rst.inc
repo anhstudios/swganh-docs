@@ -2,3 +2,4 @@
 * :doc:`/pythonapi/services`
 * :doc:`/pythonapi/objects`
 * :doc:`/pythonapi/command`
+* :doc:`/pythonapi/utility`

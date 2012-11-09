@@ -9,7 +9,7 @@ Installing Build Dependencies
 
 The following is a complete list of the 3rd party dependencies that will need to be installed before building the SWGANH source.
 
-- Microsoft Visual Studio 11.0 Release Candidate+
+- Microsoft Visual Studio 2012
 - CMake 2.8.7+
 - Git 1.7+
 - Python 3.2
@@ -17,10 +17,11 @@ The following is a complete list of the 3rd party dependencies that will need to
 - SWGANH Dependencies Package
 - SWGANH Game Client
 
-Visual Studio 11.0 Release Candidate
+Visual Studio 2012
 ~~~~~~~~~~~~~~~~~~~~~~~
 
-When installing Visual Studio, be sure the version you are installing is at least the Release Candidate version and **NOT** the Developer Preview. The Release Candidate provides an opportunity to use the best tools Microsoft has to offer, so download the Ultimate edition.
+When installing Visual Studio, make sure to download the Ultimate edition, you can use it for free for 90 days, by that time Microsoft has promised they will release an Express version of Visual Studio 2012.
+if you have an MSDN license you should be able to pick up professional or the highest SKU you have access to.
 
     http://www.microsoft.com/visualstudio/11/en-us/downloads#vs
 
@@ -69,7 +70,7 @@ Now it's time to get the SWGANH environment set up and ready to begin building t
 SWGANH Dependencies Package
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-The Windows environment gives us the opportunity to prebuild the libraries that you will need to build the SWGANH source. Download the latest Visual Studio 11 dependencies from the official SWGANH downloads page and unpack the contents into the workspace directory you created in the previous step. Afterwards, the directory structure should be as follows: `C:/workspace/vendor`
+The Windows environment gives us the opportunity to prebuild the libraries that you will need to build the SWGANH source. Download the latest Visual Studio 2012 dependencies from the official SWGANH downloads page and unpack the contents into the workspace directory you created in the previous step. Afterwards, the directory structure should be as follows: `C:/workspace/vendor`
 
     https://github.com/anhstudios/swganh/downloads
 
