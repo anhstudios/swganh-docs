@@ -5,6 +5,9 @@ At the heart of GitHub is an open source version control system (VCS) called Git
 
 Download and install the latest version of Git.
 
+`Download and install the latest version of Git. 
+<http://git-scm.com/downloads/>`_.
+
 Use the default options for each step.
 
 Setup Git
@@ -12,16 +15,15 @@ Setup Git
 
 Now that you have Git installed, it's time to configure your settings. To do this you need to open Git Bash (not the Windows command line).
 
-Need a quick lesson about Git Bash?
-
 Git Configuration
 ----------
 
-**User name**
+**Username**
 
 First you need to tell git your name, so that it can properly label the commits you make.
 
-::
+.. code-block:: bash
+
 	git config --global user.name "Your Hame Here"
 	# Sets the default name for git to use when you commit
 
@@ -29,7 +31,8 @@ First you need to tell git your name, so that it can properly label the commits 
 
 Git saves your email address into the commits you make. We use the email address to associate your commits with your GitHub account.
 
-::
+.. code-block:: bash
+
 	git config --global user.email "your_email@example.com"
 	# Sets the default email for git to use when you commit
 
