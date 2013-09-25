@@ -3,8 +3,6 @@ Installing and Setting Up Git
 
 At the heart of GitHub is an open source version control system (VCS) called Git*. Created by the same team that created Linux, Git is responsible for everything GitHub related that happens locally on your computer.
 
-Download and install the latest version of Git.
-
 `Download and install the latest version of Git. 
 <http://git-scm.com/downloads/>`_.
 
